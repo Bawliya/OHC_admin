@@ -1,0 +1,31 @@
+/* CardStack.css */
+.card-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-stack-item {
+    margin-bottom: -20px;
+    display: none; /* Adjust as needed to control the overlapping effect */
+  }
+  
+  .card-stack-item img {
+    width: 70px; /* Adjust image width as needed */
+    border-radius: 8px; /* Apply border-radius to images */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Apply box shadow for a subtle effect */
+  }
+  
+  /* CardStack.css */
+  .card-stack-item.active {
+    display: block;
+  }
+  
+  .btn-red{
+    background-color:"#f90505" !important;
+     color:"white"
+  }
+  
+  .btn-red:hover{
+    background-color:"#e51d24f7" !important
+  }

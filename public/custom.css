@@ -1,0 +1,158 @@
+styles.css .custom-number-input::-webkit-inner-spin-button,
+.custom-number-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-number-input::-webkit-inner-spin-button,
+.custom-number-input::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+.custom-number-input {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.auth-bg-img {
+  background-image: url("./media/logos/2148254294.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btnRed {
+  background: #ff0008 !important;
+  color: #ffffff !important;
+}
+
+.btnRed:hover {
+  background-color: #f40808 !important;
+}
+
+.image-container {
+  perspective: 1000px; /* Add perspective to the container */
+  /* margin: 15px; */
+  border-radius: 15px;
+  overflow: hidden; /* Ensure rounded corners work correctly */
+  position: relative; /* Needed for reflection effect */
+}
+.image-containe {
+  perspective: 1000px; /* Add perspective to the container */
+  /* margin: 15px; */
+  border-radius: 15px;
+  overflow: hidden; /* Ensure rounded corners work correctly */
+  position: relative; /* Needed for reflection effect */
+}
+
+.image-thumbnail {
+  width: 100%;
+  border: 2px solid #ddd; /* Light gray border */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4); /* Pronounced shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+  transform-style: preserve-3d; /* Enable 3D transformations */
+}
+
+.image-thumbnail:hover {
+  transform: scale(1.1) rotateY(15deg) rotateX(10deg); /* 3D rotation and scale */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5); /* Larger shadow on hover */
+}
+
+/* Add a reflection below the image */
+.image-containe::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  transform: scaleY(-1);
+  opacity: 0.4;
+  border-radius: 15px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.image-containe img {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.3s ease;
+}
+
+.image-containe img:hover {
+  filter: blur(5px);
+}
+
+.image-containe {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.image-title-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(15, 14, 14, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(7px); /* Blur effect */
+  -webkit-backdrop-filter: blur(7px); /* Safari support */
+  padding: 20px 0;
+}
+
+.image-title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  backdrop-filter: blur(7px);
+  transition: opacity 0.3s ease;
+}
+
+.overlay-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.image-containe:hover .overlay {
+  opacity: 1;
+}
+
+.image-title-container {
+  margin-top: 10px;
+}
+
+/* Customize the toast container */
+/* .custom-toast-error {
+  background-color: #f44336 !important;
+  color: #fff !important; 
+} */
+
+/* Customize the toast body */
+.custom-toast-error-body {
+  font-size: 16px !important; /* Custom font size */
+  color: #ff0008;
+}
+
+/* Customize the toast progress bar */
+.custom-toast-error-progress {
+  background-color: #ff0000 !important; /* Light red progress bar color */
+}
+
+.red {
+  background-color: #1a6896 !important;
+}
